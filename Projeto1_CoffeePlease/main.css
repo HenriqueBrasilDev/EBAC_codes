@@ -17,13 +17,6 @@ body{
     position: relative;
 }
 
-header h1{
-    font-family: 'Great Vibes', cursive;
-    font-size: 50px;
-    color: white;
-    cursor: pointer;
-}
-
 header{
     position: fixed;
     width: 100%;
@@ -32,10 +25,20 @@ header{
 
 header > .container{
     align-items: center;
-    background-color: #68370d;
+    background-color: #68370d00;
     width: 100%;
     height: 90px;
     padding: 0 10%;
+}
+
+
+header h1{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4vw;
+    color: white;
+    cursor: pointer;
+    border: solid 2px rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px #ffae00;
 }
 
 header nav li{
@@ -56,54 +59,65 @@ header nav li a:hover{
     color: #68370d;
 }
 
-hr{
+hr .hr{
     margin: 10px 0;
 }
 
-section > .container{
+section#sobre .container{
     padding-top: 111px;
+    position: relative;
+    
 }
 
-section .capa-section{
-    width: 50%;
-}
-
-section .capa-section img{
+section#sobre img{
     width: 100%;
+    position: absolute;
 }
 
 
-section .capa-section img:hover{
+
+section#sobre img:hover{
     transition: 2s;
     box-shadow: 0px 0px 40px #000000;
     transform: scale(1.0);
 }
 
-section .conteudo{
-    padding-left: 35px;
-    position: absolute;
-    left: 50%;
+.conteudo{
+    width: 100%;
+    position: relative;
+    height: 600px;
 }
 
-h2{
+
+section#sobre .container::before {
+    content: "";
+
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    box-shadow: inset 0 30px 150px 100px #ff0000;
+}
+
+.conteudo h2{
+    margin: 30px auto;
     font-family: 'Great Vibes', cursive;
-    font-size: 45px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0));
+    font-size: 4vw;
     text-align: center;
-    margin-bottom: 20px;
     height: 60px;
-    
 }
 
 .conteudo p{
-    font-size: 15px;
-    color: #79512e;
+    font-size: 2vw;
+    color: #fcfcfc;
+    text-align: center;
+    margin: 50px 200px;
 }
 
 .conteudo img{
     padding-top: 20px;
     width: 8%;
     margin-left: 46%;
+    position: relative;
 }
 
 .conteudo a{
