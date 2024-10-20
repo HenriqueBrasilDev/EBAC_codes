@@ -21,7 +21,9 @@ header{
     position: fixed;
     width: 100%;
     z-index: 1;
-}
+    backdrop-filter: blur(15px);
+    box-shadow: 20px 20px 20px 2px #000000;
+    }
 
 header > .container{
     align-items: center;
@@ -34,10 +36,17 @@ header > .container{
 
 header h1{
     font-family: 'Great Vibes', cursive;
-    font-size: 4vw;
+    font-size: 50px;
     color: white;
     cursor: pointer;
     text-shadow: 2px 2px 2px #000000;
+}
+
+header nav ul{
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 header nav li{
@@ -49,13 +58,13 @@ header nav li a{
     text-decoration: none;
     color: white;
     overflow: hidden;
-    padding: 35px 30px ;
+    transition: all 1s ease-in-out;
+    transform-origin: center;
 }
 
 header nav li a:hover{
-    transition: 2.0s;
-    background-color: white;
-    color: #68370d;
+    text-shadow: 0px 5px 3px #000000;
+    font-size: 1.4em;
 }
 
 hr .hr{
@@ -71,63 +80,60 @@ section#sobre .container{
 section#sobre > img{
     width: 100%;
     position: absolute;
+    
+    
 }
 
 .conteudo{
     width: 100%;
     position: relative;
-    height: 600px;
-}
-
-
-section#sobre .container::before {
-    content: "";
-
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    box-shadow: inset 0 30px 150px 100px #ff0000;
+    text-align: center;
 }
 
 .conteudo h2{
-    margin: 10px auto;
+    margin: 15px auto 20px auto;
     font-family: 'Great Vibes', cursive;
-    font-size: 4vw;
-    text-align: center;
+    font-size: 50px;
     height: 60px;
+    text-shadow: 0px 5px 3px #000000;
+
 }
 
 .conteudo p{
-    font-size: 2vw;
+    font-size: 30px;
     color: #fcfcfc;
-    text-align: center;
-    margin: 1% 15%;
+    margin: auto 15%;
+    text-shadow: 0px 0px 15px #000000;
+
+}
+
+.conteudo > a{
+    width: 100%;
 }
 
 .conteudo > a img{
-    padding-top: 10px;
-    width: 7%;
-    margin-left: 46%;
-    position: relative;
+    padding-top: 70px;
+    width: 50px;
 }
 
-.conteudo a{
-    text-align: center;
-}
+
+
+
+
+
 
 section .container-max{
-    padding-top: 200px;
+    padding-top: 75px;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
-}
-
-form{
-    width: 100%;
 }
 
 .container h3{
     font-size: 35px;
     font-weight: normal;
     text-align: center;
+    margin: 30px 0;
+    text-shadow: 0px 10px 15px #000000;
+    
 }
 
 form input,
@@ -135,11 +141,14 @@ textarea,
 button{
     width: 350px;
     display: block;
-    margin: 20px 0px;
+    margin: 0 0 30px 0px;
     height: 50px;
-    padding-left: 10px;
-    border-color: white;
+    border: none;
     border-radius: 10px;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    box-shadow: 0px 10px 15px #000000;
+
 }
 
 textarea{
@@ -149,7 +158,7 @@ textarea{
 
 button{
     cursor: pointer;
-    background-image: linear-gradient( #68370d, #2b2118);
+    background-image: linear-gradient( #bb5d0b, #2b2118);
     color: white;
     font-size: 25px;
     font-family: 'Lobster', cursive;
@@ -157,23 +166,31 @@ button{
 }
 
 button:hover{
-    transition: 2s;
-    background-image: linear-gradient(#2b2118,  #68370d);
+    background-image: linear-gradient(#000000,  #bb5d0b);
 }
 
-.container-max p,
-address
+
+.container-max ul{
+    margin-bottom: 25px;
+}
+
+.container-max ul li{
+    display: inline-block;
+}
+
+#contato .container-max p
 {
-    padding-top: 10px;
     font-size: 20px;
+    position: relative;
+    top: -4px;
 }
 
-.container-max a{
+#contato .container-max a{
     display: block;
     padding: 5px 0px;
-    margin: 10px;
+    margin-right: 10px;
     border-radius: 30px;
-    background-image: linear-gradient( #bb5d0b, #2b2118);
+    background-image: linear-gradient( #bb5d0b, #000000);
     color: white;
     font-size: 200%;
     text-align: center;
@@ -181,28 +198,21 @@ address
     height: 50px;
     text-decoration: none;
     cursor: pointer;
-    background-image: linear-gradient( #2b2118, #68370d);
 }
 
-.container-max a:hover{
-    background-image: linear-gradient(#68370d,  #2b2118);
-    transition: 2.0s;
+#contato a:hover{
+    background-image: linear-gradient(#000000,  #bb5d0b);
 }
 
-.container-max ul{
-    text-decoration: none;
-    list-style: none;
-    display: block;
+#contato address{
+    font-size: 20px;
+    text-shadow: 0px 10px 15px #000000;
+    margin-top: 40px;
+
 }
 
-.container-max ul li{
-    display: inline-block;
-}
 
-input:focus, textarea:focus{
-    transition: 2s;
-    outline-color: #68370d;
-}
+
 
 footer{
     background-color: #000000;
