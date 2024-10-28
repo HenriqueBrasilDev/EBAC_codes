@@ -43,7 +43,7 @@
 
         @media only screen and (max-width: 600px) {
             .carousel {
-                top: 0%;
+                top: -60px;
             }
         }
 
@@ -55,15 +55,18 @@
 </head>
 <body>
     <header id="header">
-        <div class="navbar container text-white">
+        <div class="navbar container text-white navbar-expand-lg">
             <h1 style="cursor: pointer;"><a href="index.html" style="text-decoration: none; color: white;">Bootstrap?</a></h1>
-            <nav>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
                         <a href="#sobre" class="nav-link active">História</a>
                     </li>
                     <li>
-                        <a href="#cards" class="nav-link">Frameworks</a>
+                        <a href="#cards" class="nav-link">Curiosidades</a>
                     </li>
                     <li>
                         <a href="#ded" class="nav-link">Download & Documentação</a>
